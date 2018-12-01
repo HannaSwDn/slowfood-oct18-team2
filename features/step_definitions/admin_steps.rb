@@ -5,5 +5,4 @@ When("owner has logged in") do
         And I fill in "Password" with 'oneeye111'
         And I click 'Log in'
     }
-  end
-  
+end
