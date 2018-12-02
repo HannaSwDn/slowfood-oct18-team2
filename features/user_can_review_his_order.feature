@@ -12,5 +12,4 @@ Feature: Visitor can review his order
 
     Scenario: User reviews order
         Given I have logged in
-        Then show me the page
-        And I click 'add'
+        And I click 'Add to Cart'
