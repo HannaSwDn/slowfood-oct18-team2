@@ -1,3 +1,5 @@
+@javascript
+
 Feature: Visitor can review his order
     As a visitor, 
     In order to see my full order and a total price
@@ -14,17 +16,15 @@ Feature: Visitor can review his order
 
         And the following user exists
             | email          | password  | password_confirmation |
-            | Don@trump.com  | maga2020  | maga2020              |
+            | don@trump.com  | maga2020  | maga2020              |
 
-    @javascript
     Scenario: Visitor can view his order on a checkout page
         When I visit the site
         And I click 'Login' 
-        Then I fill in 'Email' with 'Don@trump.com'
+        Then I fill in 'Email' with 'don@trump.com'
         And I fill in 'Password' with 'maga2020'
         And I click 'Log in'
         Then I should see 'pizza'
         And I click 'Add to Cart'
         And I click 'Check out'
-        Then show me the page
-        And I should see 'Order Total: €150'
+        And I should see 'Order Total: €50'

@@ -27,3 +27,7 @@ end
 Given('I click {string}') do |element|
     click_on element
 end
+
+And('stop') do
+    binding.pry
+end

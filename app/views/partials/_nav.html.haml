@@ -15,12 +15,7 @@
                     Admin
                 %p.block.mt-4.lg:inline-block.lg:mt-0.text-teal-lighter.hover:text-white.mr-4
                     - if user_signed_in?    
-                        = link_to "Log out", destroy_user_session_path, method: 'delete'
+                        = link_to "Log out", destroy_session_path(current_user), method: 'delete'
                     - else
                         = link_to "Login", new_user_session_path
-                
-                %p.block.mt-4.lg:inline-block.lg:mt-0.text-teal-lighter.hover:text-white.mr-4
-                    - if user_signed_in?
-                        = link_to "", destroy_user_session_path, method: 'delete'
-                    - else
                         = link_to "Register", new_user_registration_path
