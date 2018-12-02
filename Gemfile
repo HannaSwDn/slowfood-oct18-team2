@@ -11,7 +11,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'turbolinks', '~> 5'
 gem 'bootsnap', '>= 1.1.0', require: false
-
+gem 'faker'
 
 group :development, :test do
   gem 'coveralls', require: false 
@@ -26,7 +26,6 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'devise'
   gem 'launchy'
-  gem 'faker'
   gem 'mini_racer'
 end
 
