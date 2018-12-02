@@ -27,3 +27,7 @@ end
 Given('I click {string}') do |element|
     click_on element
 end
+
+When('I visit the page') do
+    pending # Write code here that turns the phrase above into concrete actions
+end
