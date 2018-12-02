@@ -3,6 +3,4 @@ class ProductsController < ApplicationController
         @products = Product.all
         @categories = Category.all
     end
-
-  
 end
