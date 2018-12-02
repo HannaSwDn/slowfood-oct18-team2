@@ -25,6 +25,6 @@ Feature: Visitor can review his order
         And I click 'Log in'
         Then I should see 'pizza'
         And I click 'Add to Cart'
-        Then show me the page
         And I click 'Check out'
+        Then show me the page
         And I should see 'Order Total: €150'
