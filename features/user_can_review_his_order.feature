@@ -3,14 +3,18 @@ Feature: Visitor can review his order
     In order to see my full order and a total price
     I would like be able to see a list on an order details page
 
-    Background: 
-        Given the following user exists
-            | email          | password  | password_confirmation |
-            | Don@trump.com  | maga2020  | maga2020              |
+    Background:
+        Given the following categories exist
+            | category |
+            | main     |
 
         And the following products exists
-            | name        | description                      | price | category |
-            | green salad | fresh lettuce, tomato and cheese | 50    | starter  |
+            | name  | description | price | category |
+            | pizza | good pizza  | 50    | main     |
+
+        And the following user exists
+            | email          | password  | password_confirmation |
+            | Don@trump.com  | maga2020  | maga2020              |
 
     @javascript
     Scenario: Visitor can view his order on a checkout page
@@ -19,6 +23,8 @@ Feature: Visitor can review his order
         Then I fill in 'Email' with 'Don@trump.com'
         And I fill in 'Password' with 'maga2020'
         And I click 'Log in'
-        And I click "Add to Cart"
-        And I click "Check out"
-        And I should see "Order Total: €150"
+        Then I should see 'pizza'
+        And I click 'Add to Cart'
+        Then show me the page
+        And I click 'Check out'
+        And I should see 'Order Total: €150'
