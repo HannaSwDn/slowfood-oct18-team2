@@ -10,9 +10,9 @@ Given('the following products exists') do |table|
     end
 end
 
-Given("the following categories exist") do |table|
+Given('the following categories exist') do |table|
     table.hashes.each do |category|
-      Category.create!(category)
+        Category.create!(category)
     end
 end
 
@@ -27,4 +27,3 @@ end
 Given('I click {string}') do |element|
     click_on element
 end
-
